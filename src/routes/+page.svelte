@@ -36,7 +36,12 @@
 		grid-template-rows: repeat(5, 1fr);
 		padding: 2rem;
 		color: #E7DFD4;
+		height: 100vh;
 	}	
+	.product-hero a {
+		color: #E7DFD4;
+		text-decoration: none;
+	}
 	.product-a {
 		background-color: #AA4465;
 		grid-column: 1 / 6;
@@ -60,7 +65,7 @@
 </div>
 <div class="pale product-hero">
 	<div class="product-a">
-		<h1>Modular Frames</h1>
+		<a href="/product/modular-frames"><h1>Modular Frames →</h1></a>
 		<div>
 			<img src={placeholder} />
 			<img src={placeholder} />
@@ -69,7 +74,7 @@
 	</div>
 
 	<div class="product-b">
-		<h1>Pre-Made Kits</h1>
+		<a href="/product/kits"><h1>Pre-Made Kits →</h1></a>
 		<div>
 			<img src={placeholder} />
 			<img src={placeholder} />

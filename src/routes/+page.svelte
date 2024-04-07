@@ -61,6 +61,9 @@
 		grid-row: 3 / -1;
 		padding: 1rem;
 	}
+	.mobile-only {
+		display: none;
+	}
 
 	@media (max-width: 1020px) {
 		.hero #img {
@@ -83,6 +86,9 @@
 		.mobile-hidden {
 			display: none;
 		}
+		.mobile-only {
+			display: block;
+		}
 	}
 </style>
 <div class="pale hero">
@@ -90,6 +96,7 @@
 	</div>
 	<div id="text">
 		<h1>Custom Frames</h1>
+		<p class="mobile-only">Bringing Some Color to Your Walls</p>
 	</div>
 </div>
 <div class="pale product-hero">

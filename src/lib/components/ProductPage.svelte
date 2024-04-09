@@ -16,6 +16,9 @@
 	.text {
 		background-color: #6A8D73;
 	}
+	.previews {
+		padding-top: 10px;
+	}
 	.previews img {
 		height: 10vh;
 		width: auto;
@@ -43,6 +46,9 @@
 		justify-content: center;
 	}
 	@media (max-width: 1200px) {
+		.images {
+			padding-bottom: 0;
+		}
 		.product {
 			display: contents;
 			background-color: red;

@@ -47,7 +47,7 @@
 	}
 	.product-hero img {
 		height: auto;/*40%;*/
-		width: auto;
+		width: 100%;
 	}
 	.product-a {
 		background-color: #AA4465;

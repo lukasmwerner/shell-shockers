@@ -47,7 +47,7 @@
 	}
 	.product-hero img {
 		height: auto;/*40%;*/
-		width: 100%;
+		width: 20vw;
 	}
 	.product-a {
 		background-color: #AA4465;
@@ -77,6 +77,9 @@
 			display:flex;
 			flex-direction: column;
 		}
+		.product-hero img {
+			width: 100%;
+		}
 		.product-a {
 			margin: 0.5rem;
 		}
@@ -96,7 +99,7 @@
 	</div>
 	<div id="text">
 		<h1>Custom Frames</h1>
-		<p class="mobile-only">Bringing Some Color to Your Walls</p>
+		<p class="mobile-only">The Last Frame You Will Ever Need!</p>
 	</div>
 </div>
 <div class="pale product-hero">

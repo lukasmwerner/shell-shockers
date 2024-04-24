@@ -7,7 +7,8 @@
 		display: flex;
 		flex-direction: row;
 		background: #E7DFD4;
-		height: 100vh;
+		min-height: 100vh;
+		height: 100%;
 	}
 	.split {
 		max-width: 50vw;
@@ -33,18 +34,6 @@
 		width: 50vw;
 		height: auto;
 	}
-	.buy {
-		padding: 4rem;
-	}
-	.buy .btn {
-		background-color: #E7DFD4;
-		border-radius: 20px;
-		display: flex;
-		flex-direction: row;
-		padding: 1rem;
-		align-items: center;
-		justify-content: center;
-	}
 	@media (max-width: 1200px) {
 		.images {
 			padding-bottom: 0;
@@ -53,6 +42,7 @@
 			display: contents;
 			background-color: red;
 			height: auto;
+			min-height: auto;
 		}
 		.split {max-width: none;}
 
@@ -60,10 +50,6 @@
 			background: #E7DFD4;
 		}
 
-		.buy .btn {
-			background-color: #6A8D73;
-			color: #E7DFD4;
-		}
 		.images .large img {
 			width: 100%;
 		}
@@ -71,13 +57,17 @@
 </style>
 
 <script>
+import AddToCart from '$lib/components/AddToCart.svelte';
+
 /** @type Array<string> */
 export let images = [];
 let activeImg = 0;
 
 export let title = "";
 export let description = "";
-export let cost = "";
+
+/** @type Array<any> */
+export let products = [];
 
 </script>
 
@@ -96,8 +86,8 @@ export let cost = "";
 		<h1>{title}</h1>
 		<p>{description}</p>
 
-		<div class="buy">
-			<span class="btn">Add {cost}</span>
-		</div>
+		{#each products as product}
+			<AddToCart name={product.name} cost={product.cost} dynamic={product.dynamic} costFunction={product.costFunction} />
+		{/each}
 	</div>
 </div>

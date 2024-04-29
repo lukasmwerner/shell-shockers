@@ -15,6 +15,7 @@ function compute(w, h) {
 	h = new Number(h);
 	let f = costFunction(w, h);
 	console.log(f, w, h)
+	f = Math.trunc(f*100)/100;
 	return  `$${f}`;
 }
 
@@ -29,14 +30,17 @@ function addToCart() {
 
 <div class="buy">
 	{#if dynamic}
-		<input placeholder="Width" bind:value={width}/>
-		<input placeholder="Height" bind:value={height}/>
+		<input class="costIn" placeholder="Width" bind:value={width}/>
+		<input class="costIn" placeholder="Height" bind:value={height}/>
 	{/if}
 	<span class="btn" on:click={addToCart}>Add {name} {dynamic ? displayCost : cost}</span>
 </div>
 
 
 <style>
+	.costIn {
+		width: 10ch;
+	}
 	.buy {
 		padding: 0.2em;
 		display: flex;

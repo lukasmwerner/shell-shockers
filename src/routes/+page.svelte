@@ -1,4 +1,10 @@
 <script>
+	import corner from '$lib/images/corner.png';
+	import hanging from '$lib/images/hanging.png';
+	import cover_corner from '$lib/images/cover_corner.png';
+	import prototype_group from '$lib/images/kits/prototype_group.jpg';
+	import rendered from '$lib/images/kits/render.png';
+	import animated from '$lib/assembly.gif';
 	import placeholder from '$lib/images/placeholder.png';
 </script>
 <style>
@@ -19,7 +25,9 @@
 	.hero #img {
 		width: 50vw;
 		height: auto;
-		background-image: url($lib/images/hero_img.jpeg);
+		background-image: url($lib/images/everything.jpg);
+		background-position: center;
+		background-size: cover;
 	}
 	.hero #text {
 		display: flex;
@@ -106,18 +114,18 @@
 	<div class="product-a">
 		<a href="/product/modular-frames"><h1>Modular Frames →</h1></a>
 		<div class="imgs">
-			<img src={placeholder} />
-			<img src={placeholder} />
-			<img src={placeholder} class="mobile-hidden"/>
+			<img src={corner} />
+			<img src={hanging} />
+			<img src={cover_corner} class="mobile-hidden"/>
 		</div>
 	</div>
 
 	<div class="product-b">
 		<a href="/product/kits"><h1>Pre-Made Kits →</h1></a>
 		<div class="imgs">
-			<img src={placeholder} />
-			<img src={placeholder} />
-			<img src={placeholder} class="mobile-hidden"/>
+			<img src={prototype_group} />
+			<img src={rendered} />
+			<img src={animated} class="mobile-hidden"/>
 		</div>
 	</div>
 </div>

@@ -84,7 +84,7 @@ export let products = [];
 	</div>
 	<div class="split text">
 		<h1>{title}</h1>
-		<p>{description}</p>
+		{@html description}
 
 		{#each products as product}
 			<AddToCart name={product.name} cost={product.cost} dynamic={product.dynamic} costFunction={product.costFunction} />
